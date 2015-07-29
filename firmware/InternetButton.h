@@ -30,27 +30,29 @@ class InternetButton {
 
   InternetButton();
 
-  void
-    begin(void),
-    begin(int i),
-    allLedsOff(void),
-    allLedsOn(uint8_t r, uint8_t g, uint8_t b),
-    ledOn(uint8_t i, uint8_t r, uint8_t g, uint8_t b),
-    ledOff(uint8_t i),
-    rainbow(uint8_t wait),
-    smoothLedOn(float i, uint8_t r, uint8_t g, uint8_t b);
-  uint8_t
-    buttonOn(uint8_t i),
-    allButtonsOn(void),
-    allButtonsOff(void),
-    lowestLed(void);
-  int
-    readX(void),
-    readY(void),
-    readZ(void),
-    readX16(void),
-    readY16(void),
-    readZ16(void);
+  void begin(void);
+  void begin(int i);
+  void allLedsOff(void);
+  void allLedsOn(uint8_t r, uint8_t g, uint8_t b);
+  void ledOn(uint8_t i, uint8_t r, uint8_t g, uint8_t b);
+  void ledOff(uint8_t i);
+  void rainbow(uint8_t wait);
+  void smoothLedOn(float i, uint8_t r, uint8_t g, uint8_t b);
+
+  Adafruit_NeoPixel& getRing();
+
+  uint8_t buttonOn(uint8_t i);
+
+  uint8_t allButtonsOn(void);
+  uint8_t allButtonsOff(void);
+  uint8_t lowestLed(void);
+
+  int readX(void);
+  int readY(void);
+  int readZ(void);
+  int readX16(void);
+  int readY16(void);
+  int readZ16(void);
 
  private:
 

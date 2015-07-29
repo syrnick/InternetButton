@@ -9,7 +9,6 @@ uint8_t b2 = 5;
 uint8_t b3 = 6;
 uint8_t b4 = 7;
 
-
 Adafruit_NeoPixel ring = Adafruit_NeoPixel(PIXEL_COUNT, pin, PIXEL_TYPE);
 ADXL362 accelerometer;
 
@@ -171,6 +170,10 @@ void InternetButton::rainbow(uint8_t wait) {
     ring.show();
     delay(wait);
   }
+}
+
+Adafruit_NeoPixel& InternetButton::getRing() {
+  return ring;
 }
 
 int InternetButton::readX(){
